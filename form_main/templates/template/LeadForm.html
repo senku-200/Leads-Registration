@@ -1,0 +1,120 @@
+<!-- LeadForm.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lead Form</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa; /* Light gray background */
+            font-family: Arial, sans-serif; /* Choose a suitable font */
+            padding-top: 50px; /* Space from top */
+        }
+        .container {
+            max-width: 600px; /* Adjust container width as needed */
+            background-color: #ffffff; /* White background */
+            padding: 30px; /* Padding inside container */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+        }
+        .form-group {
+            margin-bottom: 20px; /* Spacing between form groups */
+        }
+        .form-control {
+            border-color: #ccc; /* Light gray border */
+            box-shadow: none; /* Remove default box-shadow */
+        }
+        .form-control:focus {
+            border-color: #007bff; /* Focus color */
+            box-shadow: none; /* Remove default box-shadow */
+        }
+        .btn-submit {
+            padding: 10px 20px;
+            background-color: #007bff; /* Bootstrap primary color */
+            color: #fff; /* White text */
+            border: none;
+            border-radius: 4px; /* Rounded corners */
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+        .btn-submit:hover {
+            background-color: #0056b3; /* Darker shade of primary color on hover */
+        }
+        .error-message {
+            color: #dc3545; /* Red color for error messages */
+            font-size: 0.9rem; /* Smaller font size */
+        }
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px; /* Reduce padding for smaller screens */
+            }
+            .btn-submit {
+                width: 100%; /* Full width button on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="mb-4 text-center">Lead Form</h2>
+        <form method="post">
+            {% csrf_token %}
+            <!-- Full Name -->
+            <div class="form-group">
+                <label for="{{ form.full_name.id_for_label }}">Full Name:</label>
+                {{ form.full_name }}
+                {% if form.full_name.errors %}
+                    <small class="error-message">{{ form.full_name.errors }}</small>
+                {% endif %}
+            </div>
+            <!-- Company Name -->
+            <div class="form-group">
+                <label for="{{ form.company_name.id_for_label }}">Company Name:</label>
+                {{ form.company_name }}
+                {% if form.company_name.errors %}
+                    <small class="error-message">{{ form.company_name.errors }}</small>
+                {% endif %}
+            </div>
+            <!-- Email -->
+            <div class="form-group">
+                <label for="{{ form.email.id_for_label }}">Email:</label>
+                {{ form.email }}
+                {% if form.email.errors %}
+                    <small class="error-message">{{ form.email.errors }}</small>
+                {% endif %}
+            </div>
+            <!-- Contact Number -->
+            <div class="form-group">
+                <label for="{{ form.contact_number.id_for_label }}">Contact Number:</label>
+                {{ form.contact_number }}
+                {% if form.contact_number.errors %}
+                    <small class="error-message">{{ form.contact_number.errors }}</small>
+                {% endif %}
+            </div>
+            <!-- Service Description -->
+            <div class="form-group">
+                <label for="{{ form.service_description.id_for_label }}">Service Description:</label>
+                {{ form.service_description }}
+                {% if form.service_description.errors %}
+                    <small class="error-message">{{ form.service_description.errors }}</small>
+                {% endif %}
+            </div>
+            <!-- Service Category -->
+            <div class="form-group">
+                <label for="{{ form.category.id_for_label }}">Service Category:</label>
+                {{ form.category }}
+                {% if form.category.errors %}
+                    <small class="error-message">{{ form.category.errors }}</small>
+                {% endif %}
+            </div>
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-submit mt-3">Submit</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and other scripts -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
