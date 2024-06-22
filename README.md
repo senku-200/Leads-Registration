@@ -40,7 +40,6 @@ To run this project locally or in production, follow these steps:
    ```bash
     pip install -r requirements.txt
   
-  
 4. **Apply database migrations:**
    
    ```bash
