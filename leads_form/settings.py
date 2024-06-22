@@ -92,13 +92,13 @@ WSGI_APPLICATION = 'leads_form.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your_database_name',
-        'USER': 'your_database_user',
-        'PASSWORD': 'your_password',
-        'HOST': 'localhost', 
-        'PORT': '5432',     
-    }
+         'ENGINE': 'django.db.backends.postgresql',
+         'NAME': 'leadform_db',
+         'USER': 'copper',
+         'PASSWORD': 'password',
+         'HOST': 'localhost',
+         'PORT': '5432',
+     }
 }
 
 
