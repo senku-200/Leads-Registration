@@ -12,12 +12,8 @@ Welcome to the Leads Form Django project! This project is designed to manage lea
 
 ## Introduction
 
-The Leads Form Django project provides a simple yet effective way to collect and manage leads through a web application. It includes features such as:
+The Leads Form Django project
 
-- A user-friendly form interface for capturing lead information.
-- Secure storage of leads in a database.
-- Integration with Django's admin interface for lead management.
-- Basic authentication and access control for managing users.
 
 ## Installation
 
