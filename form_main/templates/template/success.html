@@ -1,3 +1,14 @@
+{% extends 'template/base.html' %}
+
 {% block content %}
-    successfully  submitted
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="alert alert-success" role="alert">
+                    <p><strong>Thank you!</strong> Your form has been successfully submitted.</p>
+                    <small>Thank you for filling out this form.</small>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

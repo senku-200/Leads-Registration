@@ -7,7 +7,7 @@ def LeadRegistration(request):
         lead_form = LeadForm(request.POST)
         if lead_form.is_valid():
             lead_form.save()
-            return HttpResponse('success')
+            return render(request,'template/success.html')
         else:
             print('Form is not valid')
     else:

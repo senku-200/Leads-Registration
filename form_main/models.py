@@ -4,8 +4,10 @@ from django.core.validators import MinLengthValidator
 
 
 CHOICES = [
+    ('GenAI','GenAI'),
     ('Computer Vision','Computer Vision'),
-    ('Others','Others')
+    ('Predictive Maintenance','Predictive Maintenance'),
+    ('Others','Others'),
 ]
 
 
@@ -44,6 +46,12 @@ class Lead(models.Model):
         max_length=255,
         verbose_name='Service Category',
         choices = CHOICES
+    )
+    custom_category = models.CharField(
+        max_length=255,
+        verbose_name='Custom Category',
+        blank=True,
+        null=True
     )
     created_at = models.DateTimeField(
         auto_now_add=True,
