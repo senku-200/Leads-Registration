@@ -14,6 +14,10 @@ Welcome to the Leads Form Django project! This project is designed to manage lea
 
 The Leads Form Django project
 
+## Prerequisites
+Python Installation:
+   - Ensure Python is installed on your system. You can download Python from the official website python.org.
+   - It's recommended to use Python 3.x (e.g., Python 3.8, Python 3.9) as Python 2.x is no longer supported.
 
 ## Installation
 
