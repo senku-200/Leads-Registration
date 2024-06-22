@@ -25,9 +25,13 @@ SECRET_KEY = 'django-insecure-k1ft4+cd&w^zf8c6irxhbmv46c%sx44^+_lp9snx$ho_i^h@&*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['leads.yavar.ai', 'www.leads.yavar.ai']
+CSRF_TRUSTED_ORIGINS = ['https://leads.yavar.ai']
 
 
+# Secure cookies in production
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
 # Application definition
 
 
@@ -76,27 +80,26 @@ WSGI_APPLICATION = 'leads_form.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # settings.py
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'your_database_name',
-#         'USER': 'your_database_user',
-#         'PASSWORD': 'your_password',
-#         'HOST': 'localhost', 
-#         'PORT': '5432',     
-#     }
-# }
-
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'your_database_name',
+        'USER': 'your_database_user',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost', 
+        'PORT': '5432',     
+    }
+}
 
 
 # Password validation
