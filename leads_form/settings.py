@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-k1ft4+cd&w^zf8c6irxhbmv46c%sx44^+_lp9snx$ho_i^h@&*
 DEBUG = False
 
 ALLOWED_HOSTS = ['leads.yavar.ai', 'www.leads.yavar.ai']
-CSRF_TRUSTED_ORIGINS = ['https://leads.yavar.ai','leads.yavar.ai', 'www.leads.yavar.ai']
+CSRF_TRUSTED_ORIGINS = ['https://leads.yavar.ai']
 
 
 # Secure cookies in production
