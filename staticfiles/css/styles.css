@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-html, body {
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -79,7 +79,6 @@ footer {
 }
 
 #footer-logo {
-    width: 100px;
     height: 35px;
 }
 
@@ -134,41 +133,6 @@ footer {
     color: #FFF;
     font-size: 10px;
 }
-
-#static-con {
-    display: flex;
-    flex-direction: column;
-    max-width: 925px;
-    padding: 40px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    margin-inline: auto;
-    border-radius: 20px;
-    background: #000;
-    color: #FFF;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-#static-con p:first-child {
-    font-size: 40px;
-    padding-bottom: 20px;
-    font-weight: 700;
-}
-
-#static-con p {
-    line-height: 2rem;
-}
-
-.redirect-btn {
-    transition: gap 0.5s;
-}
-
-.redirect-btn:hover {
-    gap: 10px;
-}
-
 
 
 .container {
@@ -237,7 +201,7 @@ footer {
     outline: none;
     border-color: #232c61;
 }
-/* .btn-outline-primary:h */
+
 #form_title {
     font-size: 2rem;
     font-weight: 600;
@@ -316,10 +280,6 @@ footer {
         gap: 10px;
     }
 
-    #social-media {
-        flex-direction: column;
-        gap: 10px;
-    }
 
     #social-media a {
         font-size: 12px;
@@ -348,11 +308,10 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 10px;
-        /* padding: 20px 0; */
     }
 
     main {
-        padding: 0 20px;
+        padding: 0px;
         display: flex;
         flex-direction: column;
         gap: 20px;
@@ -385,7 +344,7 @@ footer {
     }
 
     #footer-con {
-        font-size: 10px;
+        font-size: xx-small;
     }
 
     #links {
@@ -396,9 +355,6 @@ footer {
         font-size: 8px;
     }
 
-    #social-media {
-        gap: 8px;
-    }
 
     #social-media a {
         font-size: 10px;
@@ -406,6 +362,9 @@ footer {
 
     #copyright {
         font-size: 8px;
+    }
+    #footer-logo{
+        height: 25px;
     }
 
     .product_title p {
@@ -427,6 +386,7 @@ footer {
     .form-group textarea,
     .form-group select {
         padding: 10px;
+        font-size: smaller;
     }
     .form-container{
         padding:20px;
@@ -441,4 +401,43 @@ footer {
     .btn-dark{
         scale: .8;
     }
+    .error-message{
+        font-size: xx-small;
+    }
+    #serviceDescription{
+        font-size: xx-small;
+    }
+    main{
+        justify-content: center;
+    }
+    .row{
+        padding: 0px 10px;
+    }
+}
+
+
+.iti {
+    width: 100%;
+}
+
+.iti__selected-flag {
+    margin-right: 5px;
+}
+
+#contact-con{
+    display: flex;
+}
+#contact-con select{
+    max-width: 30%;
+    font-size:smaller;
+    background-color: #f7f7f7;
+    border-top-right-radius:0px;
+    border-bottom-right-radius:0px;
+}
+#contact-con input{
+    border-top-left-radius:0px;
+    border-bottom-left-radius:0px;
+}
+#contact-con select option{
+    font-size:smaller;
 }
