@@ -2,9 +2,18 @@
 <header>
     <nav class="navbar">
         <div >
-            <img src="{% static 'images/Yavar_logo.png' %}" alt="Logo" id="logo">
+            <a href="{% url 'LeadRegistration' %}">
+                <img src="{% static 'images/Yavar_logo.png' %}" alt="Logo" id="logo">
+            </a>
         </div>
-        <a class="btn btn-dark" id='admin-btn' href="{% url 'admin:index' %}">Login</a>
+        {% if isShowBack %}
+            <div id='btn-grp'>
+                <a href="{% url 'LeadRegistration' %}" class="btn btn-dark">Back</a>
+                <a class="btn btn-dark" id='admin-btn' href="{% url 'admin:index' %}">Login</a>
+            </div>
+        {% else %}
+            <a class="btn btn-dark" id='admin-btn' href="{% url 'admin:index' %}">Login</a>
+        {% endif %}
 
     </nav>
 </header>

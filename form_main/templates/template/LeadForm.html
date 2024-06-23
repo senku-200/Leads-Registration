@@ -10,9 +10,13 @@
             
             <div class="form-group">
                 <label for="{{ form.full_name.id_for_label }}">Full Name:</label>
-                {{ form.full_name }}
+                {{ form.full_name }} 
                 {% if form.full_name.errors %}
-                    <small class="error-message">{{ form.full_name.errors }}</small>
+                    <ul class="errorlist">
+                        {% for error in form.full_name.errors %}
+                            <li><small class="error-message">{{ error }}</small></li>
+                        {% endfor %}
+                    </ul>
                 {% endif %}
             </div>
         
@@ -34,7 +38,9 @@
         
             <div class="form-group">
                 <label for="{{ form.contact_number.id_for_label }}">Contact Number:</label>
-                {{ form.contact_number }}
+                <div id='contact-con'>
+                    {{ form.contact_number }}
+                </div>
                 {% if form.contact_number.errors %}
                     <small class="error-message">{{ form.contact_number.errors }}</small>
                 {% endif %}

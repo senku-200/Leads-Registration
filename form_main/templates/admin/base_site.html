@@ -1,0 +1,20 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+
+
+{% block title %}Yavar{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    {% if user.is_authenticated %}
+    <a href="{% url 'LeadRegistration' %}">
+        <img src="{% static 'images/footer_yavar.png' %}" alt="Logo" id="logo" style="height:20px">
+    </a>
+    {% else %}
+        Admin Login
+    {% endif %}
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

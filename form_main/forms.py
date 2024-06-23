@@ -1,7 +1,12 @@
 from django import forms
 from .models import Lead
-
+from phonenumber_field.formfields import PhoneNumberField
+from phonenumber_field.widgets import PhoneNumberPrefixWidget 
 class LeadForm(forms.ModelForm):
+    full_name = forms.CharField(label='Full Name', max_length=50, widget=forms.TextInput(attrs={'pattern': '[A-Za-z\s]{1,50}', 'title': 'Full name should only contain letters and spaces, maximum 50 characters'}))
+    contact_number = PhoneNumberField(
+        widget=PhoneNumberPrefixWidget(initial='IN')
+    )
     class Meta:
         model = Lead
         fields = ['full_name', 'company_name', 'email', 'contact_number', 'service_description', 'category', 'custom_category']
