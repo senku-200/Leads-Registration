@@ -5,3 +5,4 @@ phonenumbers==8.13.39
 psycopg2-binary==2.9.9
 sqlparse==0.5.0
 tzdata==2024.1
+whitenoise==6.7.0
