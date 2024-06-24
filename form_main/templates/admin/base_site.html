@@ -2,19 +2,21 @@
 {% load static %}
 
 
-
 {% block title %}Yavar{% endblock %}
 
 {% block branding %}
 <h1 id="site-name">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     {% if user.is_authenticated %}
     <a href="{% url 'LeadRegistration' %}">
         <img src="{% static 'images/footer_yavar.png' %}" alt="Logo" id="logo" style="height:20px">
     </a>
     {% else %}
-        Admin Login
+        <a href="{% url 'LeadRegistration' %}" style="position:absolute;left:20px;color:ccc;"><i class="fa-solid fa-arrow-left-long"></i></a>
+        <h1 style='margin:0px'>Admin Login.</h1>
     {% endif %}
 </h1>
+
 {% endblock %}
 
 {% block nav-global %}{% endblock %}

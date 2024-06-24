@@ -45,16 +45,7 @@
                     <small class="error-message">{{ form.contact_number.errors }}</small>
                 {% endif %}
             </div>
-        
-            <div class="form-group">
-                <label for="{{ form.service_description.id_for_label }}">Service Description:</label>
-                <p id='serviceDescription'>Please describe the type of services you require from our company</p>
-                {{ form.service_description }}
-                {% if form.service_description.errors %}
-                    <small class="error-message">{{ form.service_description.errors }}</small>
-                {% endif %}
-            </div>
-        
+
             <div class="form-group">
                 <label for="{{ form.category.id_for_label }}">Service Category:</label>
                 {{ form.category }}
@@ -70,6 +61,17 @@
                     <div class="error-message">{{ form.custom_category.errors }}</div>
                 {% endif %}
             </div>
+        
+            <div class="form-group">
+                <label for="{{ form.service_description.id_for_label }}">Service Description:</label>
+                <p id='serviceDescription'>Please describe the type of services you require from our company</p>
+                {{ form.service_description }}
+                {% if form.service_description.errors %}
+                    <small class="error-message">{{ form.service_description.errors }}</small>
+                {% endif %}
+            </div>
+        
+            
             
             <button type="submit" class="btn btn-outline-primary">Submit</button>
         </form>

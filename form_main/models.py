@@ -7,6 +7,7 @@ CHOICES = [
     ('GenAI','GenAI'),
     ('Computer Vision','Computer Vision'),
     ('Predictive Maintenance','Predictive Maintenance'),
+    ('ESG','ESG'),
     ('Others','Others'),
 ]
 
